@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const userSchema = mongoose.Schema({
     name:{
          type: 'string',
-         required: true
+         
     },
     
     email:{
@@ -18,28 +18,28 @@ const userSchema = mongoose.Schema({
     },
     phone:{
         type: Number,
-        required: true,
+       
     },
     
     gender:{
         type: 'string',
-        required: true,
+        
        
     },
     jobPortal:{
         type: 'string',
-        required: true,
+      
        
     },
     city :{
         type: 'string',
-        required: true,
+       
        
     },
     
     state:{
         type: 'string',
-        required: true,
+       
     },
    
    
