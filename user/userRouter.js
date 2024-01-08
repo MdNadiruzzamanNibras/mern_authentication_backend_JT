@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const User = require("./userSchema")
 const bcrypt = require("bcrypt");
+const user = require("./userSchema");
 
 
 router.get('/', (req, res) => {
@@ -52,6 +53,15 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.get("/all", async (req, res) => {
+    try {
+        const users = await User.find()
+        res.status(201).json(users)
+        console.log(users);
+    } catch (error) {
+        res.status(422).json(error);
+    }
+})
 
 module.exports = router;
 
